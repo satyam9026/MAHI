@@ -1,9 +1,10 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-<!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -13,114 +14,161 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1761857755202134');
+fbq('init', '1184213714779356');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1761857755202134&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1184213714779356&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAHI TIPPS</title>
+    <title>𝐏𝐀𝐍𝐊𝐀𝐉 𝐁𝐇𝐀𝐑𝐃𝐖𝐀𝐉 | Trading Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body{
-            background: url("https://blogger.googleusercontent.com/img/a/AVvXsEg4iJPdwxPIwNvb-Ek-eaRWVA7YeJT5US6dJvF9Him4UTJNOkwo6PFw1crH4uNtJUvg6UhQ8pzDpfdkl6s-TQQB19Q16mKe6f-MxSnHUyJnfn8BVa3oUwGQDrxsbmxdJYbUBkkdYduH2MWqMcbC-XeedZNsWAch31OOp6OkRFMAoYr6SGNDBMAnw0UifDw");
-            background-repeat: no-repeat;
-            background-size: 100% 130%;
+        :root {
+            --primary: #6366f1;
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+        body {
+            background: #0f172a;
             color: white;
-        }
-        .container {
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            background: radial-gradient(circle at top right, #1e1b4b, #0f172a);
         }
 
-      .heading{
-        text-align: center;
-      }
-
-        .counter {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 30px;
-            padding: 20px;
-        }
-
-        .container img {
+        /* Ambient Glows */
+        .blur-blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            filter: blur(150px);
             border-radius: 50%;
-            width: 200px;
-            padding-bottom: 20px;
+            z-index: 0;
+            opacity: 0.3;
         }
 
-        .btn {
-            animation-name: pulseBtn;
-            -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-            -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-            background: linear-gradient(45deg, #5149ff, #ff8a73, #ff73e1, #49ffcc);
-            background-size: 200% 200%;
-            animation: bg-animation 5s ease infinite;
-            color: white;
-            padding: 20px 50px;
-            border-radius: 40px;
-            font-size: 20px;
-            font-weight: bold;
-            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
-            transition: all 0.4s ease-in-out;
+        .main-card {
+            width: 90%;
+            max-width: 400px;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            padding: 40px;
+            text-align: center;
             position: relative;
             z-index: 1;
-            cursor: pointer;
+            transition: transform 0.3s ease;
         }
 
-        @media(max-width:568px){
-            p{
-                text-align: center;
-                font-size: 9px;
-            }
+        .avatar-box {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
+            border-radius: 28px;
+            background: linear-gradient(45deg, #6366f1, #a855f7);
+            padding: 4px;
+            position: relative;
         }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            background: #0f172a;
+            border-radius: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .tag { color: #818cf8; font-size: 14px; margin-bottom: 24px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+        .btn-join {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: white;
+            color: #0f172a;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 15px;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-join:hover {
+            transform: scale(1.02);
+            background: #6366f1;
+            color: white;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat-item { font-size: 12px; opacity: 0.7; }
+        .stat-val { display: block; font-size: 18px; font-weight: 700; color: white; }
+
+        .disclaimer {
+            font-size: 10px;
+            margin-top: 30px;
+            opacity: 0.4;
+            line-height: 1.6;
+        }
+        .avatar-img {
+    width: 100%;
+    height: 100%;
+    background: #0f172a;
+    border-radius: 26px;
+    overflow: hidden; /* Yeh zaruri hai taaki image radius se bahar na nikle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
     </style>
-
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="heading">MAHI-TIPPS</h1>
-        <span style="font-weight: bold; text-align: center;">MAHI-TIPPS : Your #1 Trading Source 🔥</span>
-        <div class="blink back counter"><span id="countdown">59</span><span style="font-size: 15px;"
-                class="blink">SECONDS</span>
+
+    <div class="blur-blob"></div>
+
+    <div class="main-card">
+<div class="avatar-box">
+    <div class="avatar-img">
+        <img src="pbofficail.jpg" alt="Pankaj Bhardwaj" style="width: 100%; height: 100%; object-fit: cover; border-radius: 26px;">
+    </div>
+</div>
+        
+        <h1>𝐏𝐀𝐍𝐊𝐀𝐉 𝐁𝐇𝐀𝐑𝐃𝐖𝐀𝐉</h1>
+        <div class="tag">Index Trading Expert</div>
+
+        <a href="https://t.me/+zF5toczqoV9iNDY1" class="btn-join">JOIN TELEGRAM CHANNEL</a>
+
+        <div class="stats-row">
+            <div class="stat-item"><span class="stat-val">24/7</span>Updates</div>
+            <div class="stat-item"><span class="stat-val">LIVE</span>Calls</div>
+            <div class="stat-item"><span class="stat-val">100%</span>Free</div>
         </div>
-        <img src="image.png"
-            alt="logo">
-        <a href="https://t.me/+oDqgqVcBr0NkNmY1" target="_blank"><button class="btn">JOIN NOW FOR FREE</button></a>
-        <span style="margin-top: 45px; text-align: center;">Best Signals, Best Results</span>
-        <span style="margin-bottom: 20px; text-align: center;">The Best Trading Channel 💹</span>
-        <p>Disclaimer: This channel is for educational and informational purposes only. We do not provide investment advice or guaranteed returns. Trading in the stock market involves risk. Please consult your financial advisor before making any investment decisions.</p>
-        <p style="text-align: center; font-size: 12px;"><span style="color: #ffffff;"><strong>This Channel Advertise By <a target="_blank" href="https://wa.me/+9175210 09436"><span style="color: #ffff00; animation: blink 1s infinite;">Royalads</span></a></strong></span></p>
+
+        <p class="disclaimer">
+            DISCLAIMER: Educational platform only. Radhika Telugu Trader is NOT SEBI registered. Trading involves significant financial risk.
+        </p>
     </div>
 
-
-    <script>
-        let remainingSeconds = 60;
-        function updateCountdown() {
-            document.getElementById("countdown").innerHTML = `${remainingSeconds}`;
-            remainingSeconds -= 1;
-            if (remainingSeconds < 0) {
-                remainingSeconds = 60;
-            }
-        }
-        updateCountdown();
-        const countdownInterval = setInterval(updateCountdown, 1000);
-    </script>
-
 </body>
-
-
-
 </html>
